@@ -1,7 +1,7 @@
 <script setup lang="ts"></script>
 
 <template>
-  <div>Page: foo</div>
+  <h1>Page: foo</h1>
 </template>
 
 <style scoped></style>
