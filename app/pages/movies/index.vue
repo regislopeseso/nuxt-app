@@ -11,40 +11,42 @@
 </script>
 
 <template>
-  <form @submit.prevent="search">
-    <input
-      type="text"
-      v-model="query"
-    />
-    <button>Search</button>
-  </form>
+  <div>
+    <form @submit.prevent="search">
+      <input
+        type="text"
+        v-model="query"
+      />
+      <button>Search</button>
+    </form>
 
-  <ul
-    style="
-      display: flex;
-      flex-wrap: wrap;
-      gap: 10px;
-      list-style: none;
-    "
-  >
-    <li
-      v-for="movie in movies"
-      :key="movie.imdbID"
+    <ul
+      style="
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+        list-style: none;
+      "
     >
-      <NuxtLink
-        :to="{
-          name: 'movies-id',
-          params: { id: movie.imdbID },
-        }"
+      <li
+        v-for="movie in movies"
+        :key="movie.imdbID"
       >
-        <img
-          :src="movie.Poster"
-          :alt="movie.Title"
-          width="300"
-        />
-      </NuxtLink>
-    </li>
-  </ul>
+        <NuxtLink
+          :to="{
+            name: 'movies-id',
+            params: { id: movie.imdbID },
+          }"
+        >
+          <img
+            :src="movie.Poster"
+            :alt="movie.Title"
+            width="300"
+          />
+        </NuxtLink>
+      </li>
+    </ul>
+  </div>
 </template>
 
 <style scoped></style>
