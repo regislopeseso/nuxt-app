@@ -1,3 +1,14 @@
+<script setup>
+  const siteTitle = "My movie site";
+  useHead({
+    titleTemplate: (titleChunk) => {
+      return titleChunk
+        ? `${titleChunk} - ${siteTitle}`
+        : siteTitle;
+    },
+  });
+</script>
+
 <template>
   <div>
     <nav style="display: flex; gap: 10px">
