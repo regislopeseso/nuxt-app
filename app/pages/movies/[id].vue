@@ -4,7 +4,7 @@
   const { data } = await useFetch(
     `http://www.omdbapi.com/?apikey=4996b3da&i=${route.params.id}`,
     {
-      pick: ["Plot", "Title"],
+      pick: ["Plot", "Title", "Poster"],
       key: `/movies/${route.params.id}`,
       onResponse({ request, response }) {
         if (response._data.Error === "Incorrect IMDb ID.") {
