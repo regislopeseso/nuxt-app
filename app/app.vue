@@ -1,5 +1,6 @@
 <script setup>
   const siteTitle = "My movie site";
+
   useHead({
     titleTemplate: (titleChunk) => {
       return titleChunk
